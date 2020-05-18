@@ -66,6 +66,9 @@
 }
 
 /* Flex columns */
+#blog .blog .flex-columns.flex-reverse .row{
+    flex-direction: row-reverse;
+}
 
 .flex-columns .row{
     display: flex;
@@ -129,7 +132,24 @@
 
 .section-header h2{
     font-size: 40px;
-    margin: 20px;
+    margin: 20px 0;
+}
+
+#cases .cases .flex-grid .section-padding {
+    padding: 20px 20px 40px;
+}
+
+/* Flex grid */
+.flex-grid .row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.flex-grid .column{
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
 }
 /* Cases */
 
