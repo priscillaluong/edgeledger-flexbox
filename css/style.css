@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    color: #333;
+    text-decoration: none;
+}
+
+h1, h2{
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+p{
+    margin: 10px 0;
+}
+
+img{
+    width: 100%;
+}
+
+/* Navigation Bar */
+
+.navbar {
+    display: flex;
+    /* to use flex in CSS we need to state this i.e. defines a flex container */
+    flex-direction: row;
+    /* flex-direction establishes the main axis */
+    /* flex-wrap: wrap; */
+    /* flex-wrap: wrap allows the flex to wrap across multiple lines */
+    /* flex-flow: row wrap; */
+    /* flex-flow: row wrap is shorthand for flex-direction: and flex-wrap: ;; */
+    align-items: center;
+    /* Align-items targets the cross-axis which is vertical in this instance */
+    justify-content: space-between;
+    /* justify-cotent aligns on the main-axis. It specifies how to distribute the leftover space between the items */
+    background-color: #333;
+    color: #fff;
+    opacity: 0.8;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0px;
+    padding: 0 30px;
+}
+
+.navbar a{
+    color: #fff;
+    padding: 10px 20px;
+    margin: 0 5px;
+}
+
+.navbar a:hover{
+    border-bottom: #28a745 2px solid;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar .logo{
+    font-weight: 400px;
+}
+
+/* Header */
+
+.hero{
+    background-image: url('../images/home/showcase.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    color: #fff;
+}
+
+.hero .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    padding: 0 20px;
+}
+
+.hero .content h1{
+    font-size: 55px;
+}
+
+.hero .content p{
+    font-size: 20px;
+    max-width: 600px;
+    margin: 20px 0 30px;
+}
+
+/* sudo selector - allows us to put content there before and after */
+.hero::before{
+    content: '';
+    position: absolute;
+    /* for something to be positioned absolute within a parent, the parent needs to be positioned relative */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+/* z-index specifies the position of something amongst all the different layers  */
+/* so in this instance we want to bring the .hero .content above the overlay */
+
+.hero *{
+    z-index: 10;
+}
+/* a greater z-index number means that it will be in front */
+
+/* Icons */
+
+.icons{
+    padding: 30px;
+}
+
+.icons h3{
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.icons i{
+    background-color: #28a745;
+    color: #fff;
+    padding: 1rem;
+    /* 1 rem is 16px bc thats the root element font size */
+    border-radius: 50px;
+    margin-bottom: 15px;
+}
+
+/* Cases */
+
+.cases img:hover{
+    opacity: 0.7;
+}
