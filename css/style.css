@@ -129,9 +129,21 @@ img{
 /* a greater z-index number means that it will be in front */
 
 .hero.blog{
-    background: url('../images/home/blog.jpg') no-repeat center center;
+    background: url('../images/home/blog.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 30vh;
 }
+
+main .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    padding: 0 20px;
 /* Icons */
 
 .icons{
