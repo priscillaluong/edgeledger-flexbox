@@ -128,6 +128,10 @@ img{
 }
 /* a greater z-index number means that it will be in front */
 
+.hero.blog{
+    background: url('../images/home/blog.jpg') no-repeat center center;
+    height: 30vh;
+}
 /* Icons */
 
 .icons{
